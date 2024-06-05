@@ -57,7 +57,7 @@ function Contact() {
             a message about anything that you want me to work on. You can
             contact me anytime.
           </p>
-          <d2iv className="contact-details flex flex-col gap-4 text-gray-300 text-lg">
+          <div className="contact-details flex flex-col gap-4 text-gray-300 text-lg">
             <div className="contact-detail flex items-center gap-4">
               <img src={mail_icon} alt="Mail Icon" />
               <p>sahjad.ranchi@gmail.com</p>
@@ -70,7 +70,7 @@ function Contact() {
               <img src={location_icon} alt="Location Icon" />
               <p>Hyderabad-18, India</p>
             </div>
-          </d2iv>
+          </div>
         </div>
         <form
           onSubmit={onSubmit}
