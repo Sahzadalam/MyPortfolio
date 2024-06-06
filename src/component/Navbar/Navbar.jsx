@@ -1,33 +1,47 @@
-
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Logo from "../../assets/Logo.png"; // Adjust the path to your logo
-import menu_open from "../../assets/menu_open.svg"
-import menu_close from "../../assets/menu_close.svg"
-import "./Navbar.css"
+import menu_open from "../../assets/menu_open.svg";
+import menu_close from "../../assets/menu_close.svg";
+import "./Navbar.css";
 function Navbar() {
-  const menuRef =useRef();
-  const openMenu = ()=>{
+  const menuRef = useRef();
+  const openMenu = () => {
     // menuRef.current.style.right="0";
-    menuRef.current.classList.add('open');
-  }
-  const closeMenu = ()=>{
+    menuRef.current.classList.add("open");
+  };
+  const closeMenu = () => {
     // menuRef.current.style.right="350px";
-    menuRef.current.classList.remove('open');
-  }
+    menuRef.current.classList.remove("open");
+  };
   const navItems = [
     { id: "home", label: "Home", href: "#Home" },
     { id: "about", label: "About", href: "#About" },
+    { id: "company", label: "Companies", href: "#Company" },
+
     { id: "projects", label: "Projects", href: "#Projects" },
     { id: "contact", label: "Contact", href: "#Contact" },
   ];
   return (
     <div className="navbar fixed top-5 left-8 right-8 flex items-center justify-between border border-white border-opacity-10 rounded-lg py-3 px-3 lg:max-w-screen-md mx-auto  bg-opacity-5 shadow-md backdrop-blur-lg text-white z-50 ">
       <img src={Logo} alt="Logo" style={{ width: "130px" }} />
-      <img src={menu_open}onClick={openMenu} alt="" className="nav-mob-open "/>
+      <img
+        src={menu_open}
+        onClick={openMenu}
+        alt=""
+        className="nav-mob-open "
+      />
 
-      <ul ref={menuRef} className="nav-menu   items-center list-none gap-4  font-semibold flex ">
-        <img src={menu_close} onClick={closeMenu}alt="" className="nav-mob-close  "/>
+      <ul
+        ref={menuRef}
+        className="nav-menu   items-center list-none gap-4  font-semibold flex "
+      >
+        <img
+          src={menu_close}
+          onClick={closeMenu}
+          alt=""
+          className="nav-mob-close  "
+        />
         {navItems.map((item) => (
           <li key={item.id}>
             <AnchorLink
@@ -51,6 +65,7 @@ function Navbar() {
         </AnchorLink>
       </div>
     </div>
-  )}
+  );
+}
 
 export default Navbar;
