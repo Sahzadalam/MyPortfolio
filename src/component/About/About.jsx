@@ -92,16 +92,7 @@ function About() {
               />
             </div>
           </div>
-          <div className="about-achievements flex flex-col items-center justify-center w-full my-6 md:my-10 gap-6 md:gap-10 lg:gap-20">
-            <div className="about-achievement flex flex-col items-center gap-2 md:gap-4 transition duration-300 transform hover:scale-105 my-auto m-auto">
-              <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-tr from-purple-600 to-orange-500 text-transparent bg-clip-text">
-                6+
-              </h1>
-              <p className="text-sm md:text-base font-semibold">
-                PROJECTS COMPLETED
-              </p>
-            </div>
-          </div>
+        
         </div>
       </div>
     </div>
